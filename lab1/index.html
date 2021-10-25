@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <style>
+        *{
+            margin: 0; /*отступы*/
+            padding: 0; /*поля вокруг содержимого элемента*/
+            box-sizing: border-box; /*размер блока*/
+        }
+        .tetris_form{
+            padding: 50px 50px;
+            text-align: center;
+            background-color: rgb(0, 0, 0);
+            border-radius: 10px;
+        }
+        .body{
+            height: 100vh; /*высота блока*/
+            background-color: rgb(47, 79, 79);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #username{ /*блок для ввода имени*/
+            display: block;
+            border: 3px solid rgb(0, 0, 0);
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 25px;
+            font-size: 18px;
+            outline: none;
+        }
+        .tetris_label{ /*ввод имени*/
+            font-size: 20px;
+            color: #fff;
+        }
+        .tetris_button{ /*кнопка в игру*/
+            padding: 10px 20px;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            font-size: 20px;
+            background-color: rgb(119, 136, 153);
+        }
+    </style>
+</head>
+<body class = "body">
+<form class = "tetris_form" action = "main.html" method = "get">
+    <label class = "tetris_label" for = "username">
+        Введите имя:<br>
+    </label>
+    <input id = "username" placeholder = "Имя пользователя">
+    <button class="tetris_button" type = "submit">Начать игру</button>
+</form>
+<script src="script/formscript.js"> </script>
+</body>
+</html>
