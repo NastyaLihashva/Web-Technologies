@@ -1,0 +1,50 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="../public/styles/participants.min.css")
+        title Список участников
+    body 
+        main.main
+            .container#container 
+                h1.title Список участников аукциона
+                .table__wrapper
+                    table.table#table 
+                        thead      
+                            tr
+                                th.table-th.th-id
+                                    | ID участника
+                                th.table-th.th-name 
+                                    | Имя участника
+                                th.table-th.th-capital
+                                    | Деньги участника
+                                th.table-th.th-adress
+                                    | Адрес проживания
+                                th.table-th.th-handler 
+                                    | Действия
+                        tbody
+            button.button.btn-addItem
+                    span Добавить участника
+            a.btn(href="/") В меню
+        #modal.modal__overlay
+            .modal
+                button.button.button__close
+                    span.svg_ui
+                        svg.icon__close
+                            use(xlink:href='../public/img/sprite.svg#close_modal')
+                h3.modal__header Добавление участника
+                form.modal__form#participant__form
+                    label.label.modal__label
+                        input#name.input.input__type.modal__input(name='name' type='text' placeholder='Имя участника' required)
+                    label.label.modal__label
+                        input#capital.input.input__type.modal__input(name='capital' type='number' placeholder='Капитал участника' required)
+                    label.label.modal__label
+                        input#address.input.input__name.modal__input(name='address' type='text' placeholder='Адрес проживания' required)
+                    input#id.input.input__name.modal__input(name='id' type='text' hidden)
+                    button.button.button-ui_firm.modal__btn(type='submit') Сохранить
+                    button.button.cancel-button.modal__btn Отмена
+         
+        script(src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous")
+        script(src="../public/script/participants.js") 

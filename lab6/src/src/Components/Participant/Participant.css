@@ -1,0 +1,89 @@
+.participant{
+    background: url('../../images/brokers.jpg') center/cover no-repeat;
+}
+.participant__link{
+    width: 150px;
+    margin: 0 auto;
+}
+.participant__wrapper{
+    padding: 10px;
+}
+.participant__info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.participant__title{
+    margin-bottom: 20px;
+    font-family: "Roboto Thin";
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+
+}
+
+.participant__capital{
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+.participant__stocks{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.participant__btns{
+    display: flex;
+    justify-content: space-between;
+    width: 470px;
+
+}
+
+.stock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #7c7c7c;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.stock__list{
+    margin-bottom: 15px;
+}
+.stock__item{
+    margin-bottom: 10px;
+}
+.stock__item:last-child{
+    margin-bottom: 0;
+}
+
+.stocks{
+    padding: 15px 30px;
+    margin-bottom: 30px;
+    border: 1px solid #7c7c7c;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.stocks__title{
+    margin-bottom: 20px;
+}
+
+.stocks__list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.stocks__text{
+    margin-bottom: 15px;
+}

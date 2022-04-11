@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Параметры аукциона
+    body
+        .container
+            h1.title Параметры аукциона
+            form#properties__form
+                .form
+                    label.label Время начала аукциона
+                        input.input#date__start(name="dateStart" type="datetime-local")
+                    label.label Время окончания аукциона
+                        input.input#date__end(name="dateEnd" type="datetime-local")
+                    label.label Интервал времени отсчета до окончания торга по картине(в минутах)
+                        input.input#interval__end(name="intervalEnd" type="number")
+                    label.label Время таймаута между торгами(в минутах)
+                        input.input#interval__between(name="intervalBetween" type="number" min = '0.1')
+                    label.label Время на изучение информации о картине(в минутах)
+                        input.input#interval__research(name="intervalResearch" type="number" min = '0.1')
+                button.btn.btn__accept(type="submit") Сохранить изменения
+            a.btn(href="/") В меню
+        script(src="../public/script/properties.js")

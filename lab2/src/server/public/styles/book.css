@@ -1,0 +1,126 @@
+/*редактирование книг*/
+
+* {
+    margin: 0;
+    padding: 7px 0;
+    box-sizing: border-box;
+    font-family: 'Courier New';
+    font-size: 12px;
+}
+
+.container{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bookForm{ /*форма книги*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    height: 600px;
+    padding: 10px 30px;
+    border: 5px solid rgb(0,0,0);
+    border-radius: 10px;
+    background-color: rgb(47, 79, 79);
+}
+
+.bookForm-wrapper{
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bookForm-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 50%;
+}
+
+h2{
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.bookForm__label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+    font-size: 15px;
+    color: white;
+}
+
+.bookForm__input{
+    width: 230px;
+    padding: 5px 10px;
+    margin-top: 7px;
+    outline: none;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    font-size: 14px;
+    color: rgb(0,0,0);
+    background-color: rgb(224, 255, 255);
+}
+
+input:read-only{
+    color: rgb(0, 0, 0);
+    background-color: rgb(176, 196, 222);
+}
+
+.btn{
+    width: 230px;
+    font-size: 16px;
+    padding: 6px 0;    
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+}
+
+.action-btn{
+    transition: 0.3s all;
+}
+.action-btn:hover{
+    border: 3px solid rgb(176, 196, 222);
+    /*background-color: transparent;*/
+    color: rgb(0,0,0);
+}
+
+#return{
+    background-color: rgb(47, 79, 79);
+    color: #fff;
+    text-align: center;
+    transition: 0.3s all;
+}
+#return:hover{
+    border: 2px solid rgb(47, 79, 79);
+    background-color: transparent;
+    color: #000;
+}
+
+#cancel{
+    margin-top: 10px;
+    padding: 0;
+    width: auto;
+    background-color: transparent;
+    color: #fff;
+}
+#cancel:hover{
+    text-decoration: underline;
+}
+
+#return{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.d-none{
+    display: none;
+}

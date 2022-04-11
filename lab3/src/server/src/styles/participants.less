@@ -1,0 +1,197 @@
+@import url(options.less);
+//список участников
+
+.title{
+    padding: 30px 0;
+    color: white;
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1800px;
+    min-height: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: url('../img/participants-bg.jpg') top/100% 100% no-repeat;
+}
+
+.table {
+    background-color: rgb(253, 245, 230);
+    opacity: 0.8;
+    max-width: 1100px;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px auto;
+    margin-bottom: 100px;
+    &__wrapper {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+    &-th {
+        padding: 8px 20px;
+        text-align: left;
+        color: #000;
+        font-size: 16px;
+        cursor: pointer;
+        scroll-snap-align: start;
+        & span {
+            margin-left: 3px;
+            color: #000;
+            font-size: 16px;
+        }
+    }
+    &__row {
+        height: 60px;
+        border-bottom: 1px solid rgb(0,0,0);
+    }
+    &__cell {
+        padding: 0 20px;
+        font-size: 15px;
+    }
+    &__id {
+        font-size: 13px;
+        color: rgb(105, 105, 105);
+    }
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.th{
+    &-id {
+        min-width: 130px;
+    }
+    &-name {
+        min-width: 260px;
+    }
+    &-capital {
+        min-width: 260px;
+    }
+    &-adress {
+        min-width: 260px;
+    }
+    &-handler {
+        min-width: 130px;
+    }
+    & span {
+        margin-left: 3px;
+        color: #000;
+        font-size: 16px;
+    }
+}
+.tbody {
+    background-color: white;
+    border-collapse: collapse;
+    opacity: 0;
+}
+
+#modal {
+    display: none;
+}
+
+.modal { //добавление участника
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 450px;
+    padding: 30px;
+    max-height: 90vh;
+    background: white;
+    overflow: auto;
+    &__overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(51, 51, 51, .6);
+        box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+    }
+    &__header {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__label {
+        margin-bottom: 20px;
+    }
+
+    &__btn {
+        width: 100px;
+        padding: 8px 0;
+        margin-bottom: 20px;
+        border: 1px solid rgb(0,0,0);
+        border-radius: 3px;
+    }
+
+    &__input {
+        padding: 5px 10px;
+        font-size: 14px;
+        border: 1px solid rgb(0,0,0);
+        border-radius: 3px;
+
+    }
+
+}
+
+.button__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    padding: 3px;
+}
+
+.icon__close {
+    width: 17px;
+    height: 17px;
+    fill: #B0B0B0;
+    //border: 1px solid rgb(0,0,0);
+    //border-radius: 3px;
+}
+
+
+.btn-addItem {
+    width: 216px;
+    height: 44px;
+    margin: 20px auto;
+    background-color: rgb(255, 245, 238);
+    border: 1px solid rgb(0,0,0);
+    border-radius: 3px;
+    color: #000;
+    font-weight: 600;
+    transition: 0.5s all;
+    &:hover {
+        background: transparent;
+        color: white;
+        border: 1px solid rgb(255, 245, 238);
+    }
+}
+
+.action-change{
+    margin-bottom: 5px;
+    background-color: white;
+    border: 1px solid rgb(0,0,0);
+    border-radius: 3px;
+}
+.action-remove{
+    margin-top: 5px;
+    background-color: white;
+    border: 1px solid rgb(0,0,0);
+    border-radius: 3px;
+
+}

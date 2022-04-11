@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,700); //Обнуление
+//кнопки
+
+@add-color1: rgb(255, 235, 205);
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*:focus,
+:active {
+    outline: none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 1px 1px 5px black;
+}
+
+.btn {
+    display: block;
+    width: 200px;
+    margin: 15px auto;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: @add-color1;
+    color: rgb(0,0,0);
+    transition: 0.5s all;
+    &:hover {
+        background-color: transparent;
+        border: 2px solid @add-color1;
+        color: #fff;
+    }
+}
+
+.btn__delete {
+    border: 2px solid @add-color1;
+    &:hover {
+        background-color: transparent;
+        border: 2px solid @add-color1;
+    }
+}

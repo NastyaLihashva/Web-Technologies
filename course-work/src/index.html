@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра</title>
+    <style>
+        .game{
+            display: flex;
+            justify-content: center;
+        }
+        .info{
+            margin-left: 20px;
+            color: black;
+        }
+        .popup__records {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .popup__wrapper {
+            padding: 10px 20px;
+            text-align: center;
+            background-color: rgb(255, 235, 205);
+            border-radius: 4px;
+        }
+
+        .popup__gameover {
+            font-size: 40px;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .popup__table {
+            background: rgb(255, 250, 250);
+        }
+
+        .popup__table-item {
+            padding: 10px 20px;
+            max-height: 500px;
+            overflow: auto;
+        }
+
+        .popup__name {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 700;
+
+        }
+
+        .popup__name>span {
+            margin-right: 5px;
+        }
+
+        .popup__score {
+            font-size: 18px;
+        }
+
+        .popup__table-item>li {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 7.5px;
+            margin-bottom: 7.5px;
+            border-bottom: 1px solid #000;
+        }
+
+        .popup__table-item>li:last-child {
+            margin-bottom: 0;
+        }
+
+        .popup__you {
+            color: rgb(247, 25, 91);
+        }
+        .s{
+            margin-left: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(220, 220, 220);
+
+        }
+        .overlay{
+            margin-right: 20px;
+        }
+        .controls{
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 17px;
+            font-family: Roboto;
+        }
+    </style>
+</head>
+<body>
+    <div class="game" style="background-color: rgb(47, 79, 79); padding: 110px">
+        <div class="overlay" style = "border-radius: 10px; background-color: rgb(220, 220, 220); padding: 10px">
+            <p style = "font-size: 20px; font-family: Roboto; font-weight: bold"> Введите имя: </p>
+            <form class="name">
+                <input type="text" required class="input" placeholder="Введите имя">
+                <button type="submit">Начать игру</button>
+            </form>
+            <p class="controls">
+                Управление:<br>Клавиша W - идти вверх<br> Клавиша S - идти вниз <br>
+                Клавиша A - идти налево <br> Клавиша D - идти направо <br>
+                Пробел - выстрелить <br> Пули летят в том направлении,<br> куда вы идете</p>
+        </div>
+        <canvas id="canvas" width="640" height="475" style="border: 3px solid black;"></canvas>
+        <div class = "s">
+        <div class="info">
+            <h2>Очки: <span class="score">0</span></h2>
+            <h2>Здоровье: <span class="life">3</span></h2>
+        </div>
+        </div>
+    </div>
+    <div class="popup__records">
+        <div class="popup__wrapper">
+            <h2 class="popup__gameover">Игра окончена!</h2>
+            <h2 class="popup__gameover">Таблица рекордов</h2>
+            <div class="popup__table">
+                <ol class="popup__table-item">
+                </ol>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

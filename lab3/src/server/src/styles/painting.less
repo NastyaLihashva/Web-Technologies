@@ -1,0 +1,96 @@
+@import url('./options.less');
+//описание картины
+
+.container {
+    min-height: 100vh;
+    background: url('../img/main-bg.jpg') top/100% 100% no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border: 2px solid rgb(0,0,0);
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: rgb(169, 169, 169);
+    }
+    &__img{
+        flex: 1 0 40%;
+        img{
+            width: 100%;
+        }
+    }
+}
+.title{
+    margin-bottom: 10px;
+}
+.forms{
+    flex: 1 0 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: rgb(0,0,0);
+}
+
+.form{
+    display: flex;
+    justify-content: space-between;
+    &__about, &__auction{
+        flex: 0 0 45%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__about{
+        margin-right: 20px;
+    }
+}
+#painting__form{
+    flex: 1 0 auto;
+    margin-bottom: 20px;
+}
+
+#upload__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    input{
+        margin-bottom: 10px;
+        width: 200px;
+    }
+}
+.input{
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid rgb(0,0,0);
+    border-radius: 4px;
+    background-color: rgb(253, 245, 230);
+    font-size: 16px;
+}
+.textarea {
+    resize: none;
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.btn__return{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+

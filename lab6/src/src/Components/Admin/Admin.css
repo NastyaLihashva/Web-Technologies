@@ -1,0 +1,76 @@
+.admin{
+    background: url('../../images/menu2.jpg') center/cover no-repeat;
+}
+.admin__wrapper{
+    padding: 10px;
+}
+.stocks, .participants__item, .participants{
+    padding: 15px 30px;
+    margin-bottom: 30px;
+    border: 1px solid #7c7c7c;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-family: Roboto;
+    font-size: 20px;
+}
+
+.admin__title, stocks__title{
+    margin-bottom: 20px;
+    font-family: "Roboto";
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+}
+
+.admin__title2{
+    margin-bottom: 20px;
+    font-family: "Roboto Thin";
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+.admin__list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin__text{
+    margin-bottom: 15px;
+}
+
+.stocks__distribution{
+    display: flex;
+    flex-direction: column;
+}
+
+.stocks__label{
+    display: flex;
+}
+
+.participants__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.participants__stock{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.participants__item{
+    flex: 0 0 30%;
+}
+
+.participants__text{
+    margin-bottom: 10px;
+}
+
+.admin__link{
+    width: 230px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,1 @@
+[{"id":"_z3t44dky3","name":"Газпром","max":40,"amount":93,"min":20,"distribution":"uniform","curPrice":34},{"id":"_4mj5fb855","name":"Сбербанк","max":300,"amount":11,"min":150,"distribution":"normal","curPrice":250},{"id":"_q7qxxz0gi","name":"Тесла","max":777,"amount":2,"min":444,"distribution":"normal","curPrice":587}]

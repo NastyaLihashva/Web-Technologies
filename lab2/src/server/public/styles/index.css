@@ -1,0 +1,469 @@
+/*главная страница книг*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New';
+    font-size: 15px;
+}
+
+body {
+    background-color: rgb(250, 255, 255);
+}
+
+
+.button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-ui_firm { /*добавить книгу*/
+    background-color: #055841;
+    height: 44px;
+    padding: 0 35px;
+    border: 1px solid #055841;
+    color: white;
+    font-weight: 600;
+    transition: background-color .3s;
+    margin: 25px auto 10px;
+}
+
+
+.text__center {
+    text-align: center;
+}
+
+.body-auth {
+    height: 100vh;
+}
+
+.main-auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.main-header {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+/*select*/
+.select {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 123px;
+    height: 30px;
+    align-items: center;
+    padding: 0 5px;
+    border: 1px solid #C8C5D1;
+    background-color: #E7E5EB;
+    cursor: pointer;
+}
+
+.select_option-wrapper {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #C8C5D1;
+    z-index: 1;
+}
+
+.select_option {
+    display: flex;
+    align-items: center;
+    width: 123px;
+    height: 28px;
+    padding: 0 5px;
+    background-color: #F4F3F6;
+    cursor: pointer;
+}
+
+.select_option:hover {
+    background-color: #E7E5EB;
+}
+
+.select_wrapper {
+    position: relative;
+}
+
+.select_active {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 9px 27px rgba(176, 190, 197, 0.32), 0 3px 5px rgba(176, 190, 197, 0.32);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+    fill: #055841;
+}
+
+.search_input {
+    height: 44px;
+    width: 581px;
+    margin-left: 53px;
+    padding: 0 16px;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+.search_input::-webkit-input-placeholder {
+    color: #B0B0B0;
+}
+
+.search_input::-moz-placeholder {
+    color: #B0B0B0;
+}
+
+.search_input:-ms-input-placeholder {
+    color: #B0B0B0;
+}
+
+.search_input::-ms-input-placeholder {
+    color: #B0B0B0;
+}
+
+.search_input::placeholder {
+    color: #B0B0B0;
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        justify-content: center;
+        padding: 8px;
+    }
+
+    .search_input {
+        display: none;
+    }
+
+    .logo {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.main { /*main*/
+    display: flex;
+    flex-direction: column;
+    max-width: 1186px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border: 3px solid rgb(47, 79, 79);
+}
+
+.title-page { /*титульник*/
+    text-align: center;
+    margin: 40px 0 30px;
+    font-size: 40px;
+    font-weight: 600;
+    background: url('../img/index.jpg') no-repeat;
+    /*background-color: rgb(47, 79, 79);*/
+    color: floralwhite;
+    text-shadow: 1px 1px 5px black;
+    padding: 30px 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .main {
+        padding: 0 10px;
+    }
+
+    .title-page {
+        margin: 30px 0 4px;
+    }
+}
+
+.tooltip {
+    display: none;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: -44px;
+    left: 50%;
+    background-color: #333333;
+    z-index: 1;
+    color: white;
+    font-size: 12px;
+    padding: 8px 20px;
+    transform: translateX(-50%);
+}
+.tooltip:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: -5px;
+    left: 47%;
+    background-color: #333333;
+    transform: rotate(45deg);
+}
+
+.action-remove, .action-change {
+    padding: 3px 0;
+    background: transparent;
+    border: none;
+}
+
+.action-change:hover {
+    color: #055841;
+}
+
+.action-icon_change {
+    margin: 0 3px;
+    width: 12px;
+    height: 14px;
+    fill: #055841;
+}
+
+.action-remove:hover {
+    color: #bf1e00;
+}
+
+.action-icon_remove {
+    margin: 0 3px;
+    width: 13px;
+    height: 13px;
+    fill: #bf1e00;
+}
+
+
+.btn-addItem {
+    width: 216px;
+    height: 44px;
+    margin: 40px auto;
+    background: transparent;
+    border: 1px solid #055841;
+    color: #055841;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.icon-btn-addItem {
+    width: 22px;
+    height: 16px;
+    fill: #055841;
+    margin-right: 8px;
+}
+
+.btn-addItem:hover {
+    background-color: #00bf6f;
+    color: white;
+    fill: white;
+}
+
+.btn-addItem:hover .icon-btn-addItem {
+    fill: white;
+}
+
+
+/*   form   */
+
+.input-wrapper {
+    position: relative;
+    margin: 20px 30px;
+}
+
+.input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #C8C5D1;
+    padding: 8px 5px;
+    color: #333333;
+    font-weight: 600;
+
+}
+
+.input:focus {
+    outline: none;
+}
+
+.error {
+    border-bottom: 1px solid #bf1e00;
+}
+
+.label {
+    transition: all .3s;
+    top: 5px;
+    color: #B0B0B0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.text-warning{
+    color: tomato;
+}
+
+.label sup {
+    font-size: 10px;
+    top: -1px;
+    right: -7px;
+    position: absolute;
+    font-weight: 600;
+    color: #055841;
+}
+
+.focus {
+    font-size: 10px;
+    top: -10px;
+}
+
+.cancel-button {
+    background-color: transparent;
+    border: none;
+    color: #333333;
+    font-weight: 600;
+    margin: 10px auto 25px;
+    text-decoration: underline;
+}
+
+
+
+.table__wrapper { /*таблица читателей*/
+    display: flex;
+    overflow-x: auto;
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+}
+
+.table {
+    min-width: 728px;
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.table-th { /*id, автор, название...*/
+    padding: 12px 20px;
+    text-align: left;
+    color: rgb(105, 105, 105);
+    font-size: 15px;
+    cursor: pointer;
+    scroll-snap-align: start;
+}
+
+.table-th.active {
+    color: #055841;
+}
+.table-th.active-reverse .svg_ui {
+  transform: rotate(180deg);
+}
+
+
+.th-id{
+    min-width: 130px;
+}
+
+.th-type{
+    min-width: 260px;
+}
+
+.th-name{
+    min-width: 260px;
+}
+
+.th-units{
+    min-width: 110px;
+}
+
+.th-cost{
+    min-width: 110px;
+}
+
+.th-handler{
+    min-width: 130px;
+}
+
+
+.sorting {
+    transform: rotate(180deg);
+}
+
+.tbody {
+    background-color: white;
+    border-collapse: collapse;
+    opacity: 0;
+}
+.tbody.fade-in{
+    transition: all 1s;
+    opacity: 1;
+}
+
+.table__row {
+    cursor: pointer;
+    height: 60px;
+    border-bottom: 1px solid #C8C5D1;
+}
+
+.table__date span:last-child {
+    color: #B0B0B0;
+}
+
+.table__date span:first-child {
+    margin-right: 7px;
+}
+
+.table__nullClient {
+    padding: 20px;
+}
+
+.table__cell {
+    padding: 0 20px;
+}
+
+.table__id {
+    font-size: 13px;
+    color: rgb(128, 128, 128);
+}
+
+
+.icon-sort {
+    width: 8px;
+    height: 8px;
+    margin-left: 3px;
+    fill: #055841;
+}
+
+.table__actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .th-type{
+        min-width: 230px;
+    }
+    .th-name{
+        min-width: 230px;
+    }
+}
+
+.table__date {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.expired{
+    color: #bf1e00;
+}
+
+@media screen and (max-width: 1023px) {
+    .table__date {
+        flex-direction: column;
+    }
+}
